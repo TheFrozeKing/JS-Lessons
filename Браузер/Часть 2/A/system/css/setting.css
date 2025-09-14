@@ -1,0 +1,28 @@
+@font-face {
+  font-weight: 700;
+  font-family: "Raleway";
+  font-style: normal;
+  src: local("Raleway Bold"),
+    url("../fonts/Raleway-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: "Raleway";
+  font-style: normal;
+  src: local("Raleway Light"),
+    url("../fonts/Raleway-Light.woff2") format("woff2");
+}
+
+body {
+  font-weight: 300;
+  font-size: 16px;
+  font-family: "Raleway", "Arial", sans-serif;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
