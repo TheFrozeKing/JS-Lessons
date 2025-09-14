@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="system/css/setting.css">
+    <link rel="stylesheet" href="system/css/style.css">
+    <title>FlashNews!</title>
+</head>
+
+<body class="page light-theme">
+    <header class="page-header">
+        <div class="container">
+            <span class="header-logo">
+                <img src="system/img/main-logo.svg" width="67" height="29" alt="Логотип портала FlashNews!">
+            </span>
+            <button class="theme-button" type="button">Изменить тему</button>
+        </div>
+    </header>
+
+    <main class="inner-news">
+        <article class="container">
+            <h1 class="inner-heading">🔥 Шок! Скандал! Сенсация!</h1>
+            <div class="news-full">
+                <img src="system/img/news-robot2.jpg" alt="Робот на курорте">
+                <div class="news-stats">
+                    <button class="heart" type="button"><span class="likes-number"></span></button>
+                    <time>22 декабря </time>
+                </div>
+                <p>Оказывается, для того, чтобы начать программировать на JavaScript, необязательно быть котом! Учёные
+                    создали первого робота, который может развиваться и изменять свой код. Он сразу же научился верстать
+                    сайты и уехал фрилансить на Бали.</p>
+            </div>
+        </article>
+        <section class="comment-feed container">
+            <h2>Комментарии</h2>
+            <ol class="comment-list">
+                <li class="user-comment">Да ну, бред какой-то…</li>
+            </ol>
+            <form action="https://echo.htmlacademy.ru/courses" method="post" class="comment-form">
+                <div class="comment-inner">
+                    <label class="comment-label" for="comment-input">ваш комментарий</label>
+                    <input type="text" class="comment-field" placeholder="Комментарий" required id="comment-input">
+                </div>
+                <button class="button" type="submit">Отправить</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <div class="container">
+            <p>© FlashNews!</p>
+            <span class="footer-logo">
+                <img src="system/img/white-logo.svg" alt="Логотип портала FlashNews!">
+            </span>
+        </div>
+    </footer>
+
+    <script src="js/themes.js"></script>
+    <script src="js/likes.js"></script>
+    <script src="js/comments.js"></script>
+</body>
+
+</html>

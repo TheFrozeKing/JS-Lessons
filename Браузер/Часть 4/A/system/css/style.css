@@ -1,0 +1,50 @@
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery__photo-full {
+    margin-bottom: 12px;
+}
+
+.gallery__photo-full img {
+    display: block;
+}
+
+.gallery__photo-previews {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    width: 550px;
+    padding: 0;
+    justify-content: space-between;
+}
+
+.gallery__photo-preview {
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+}
+
+.gallery__photo-preview:hover,
+.gallery__photo-preview:focus {
+    opacity: 0.7;
+}
+
+.gallery__photo-preview img {
+    display: block;
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+}
+
+.gallery__photo-preview--active img {
+    outline: 5px solid red;
+    outline-offset: -5px;
+}
+
+.pattern {
+    background: url("../img/leaves-pattern.png") 0 0 repeat;
+}

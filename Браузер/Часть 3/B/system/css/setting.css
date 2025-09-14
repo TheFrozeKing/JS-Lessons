@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/OpenSans-Regular.woff") format("woff"),
+    url("../fonts/OpenSans-Regular.woff2") format("woff2");
+}
+
+body {
+  margin: 0 0 0 60px;
+  padding: 0;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: black;
+  background-color: white;
+  font-style: normal;
+}
+
+.no-interactions .card__button:hover,
+.no-interactions .card__button:focus,
+.no-interactions .card__button:active {
+  color: #444444;
+  background-color: #ffffff;
+  outline: none;
+}
+
+.no-interactions .popup__button:hover,
+.no-interactions .popup__button:focus,
+.no-interactions .popup__button:active {
+  color: #bfbfbf;
+  outline: none;
+}
