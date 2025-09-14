@@ -1,0 +1,69 @@
+.product {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 220px;
+    margin-bottom: 20px;
+
+    text-align: center;
+
+    border: 1px solid #cccccc;
+}
+
+.product--available::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+
+    width: 15px;
+    height: 15px;
+    padding: 5px;
+
+    background-image: url("../img/check.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px;
+    border: 1px solid #4eb543;
+    border-radius: 50%;
+}
+
+.product--unavailable {
+    filter: grayscale(1) opacity(0.7);
+}
+
+.product--unavailable::before {
+    content: "Нет в наличии";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    padding: 5px;
+
+    font-size: 14px;
+}
+
+.product--special {
+    flex-basis: 100%;
+    order: -1;
+
+    border-color: #ee3643;
+}
+
+.product--special::after {
+    content: "Товар дня";
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    height: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+
+    line-height: 30px;
+    color: #ffffff;
+
+    background-color: #ee3643;
+}

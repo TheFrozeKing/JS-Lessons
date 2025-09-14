@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            #2
+        </title>
+    </head>
+    <body>
+        <h2>Задания из файла 2</h2>
+        <script>            
+            
+            function calculateWalkTime(isRaining, temperature){
+                
+                let formatReturnStatement = (isRaining, temperature, walkTime) => {
+                    return `IsRaining = ${isRaining}, temperature = ${temperature}, WalkTime = ${walkTime}`;
+                }
+                
+                if(isRaining){
+                    return formatReturnStatement(isRaining, temperature,0);
+                }              
+                
+                switch (true) {
+                    case temperature >= 10 && temperature < 15:
+                        return formatReturnStatement(isRaining, temperature,30);
+
+                    case temperature >= 15 && temperature < 25:
+                        return formatReturnStatement(isRaining, temperature,40);
+
+                    case temperature >= 25 && temperature <= 35:
+                        return formatReturnStatement(isRaining, temperature,20);
+
+                    default:
+                        return formatReturnStatement(isRaining, temperature,0);
+                }
+            }
+
+            function calculateAgeGroup(age){
+                switch (true){
+                    case age <= 1:
+                        return 'Котята';
+                    case age > 1 && age <= 3:
+                        return 'Молодые коты';
+                    case age > 3 && age <= 7:
+                        return 'Коты средних лет';
+                    case age > 7:
+                        return 'Почтенные коты';
+                }
+            }
+
+            function calculateWeightRecomendation(weight){
+                switch (true){
+                    case weight < 4:
+                        return 'Пора перекусить';
+                    case weight >= 4 && weight <= 5.5:
+                        return 'Вес в норме';
+                    case weight > 5.5:
+                        return 'Пора на тренировку';
+                }
+            }
+
+            function getFizzBuzz(number){
+                let conditions = {3 : 'Fizz', 5 : 'Buzz', 7 : 'Bizz'} // легко расширяемо
+
+                let output = '';
+
+                for(const [key, value] of Object.entries(conditions)){
+                    if(number % key == 0){
+                        output += value;
+                    }
+                }
+
+                return output = '' ? number : output;
+            }
+            
+            function calculateFinalArtPrice(price){
+                
+                let discount = 0;
+
+                switch(true){
+                    case price >= 1000 && price < 3000:
+                        discount = 0.05;
+                        break;
+                    case price >= 3000 && price < 5000:
+                        discount = 0.1;
+                        break;
+                    case price >= 5000:
+                        discount = 0.15;
+                        break;
+                }
+
+                let discountedPrice = price * (1 - discount);
+                return `Price ${price}, Discount ${discount * 100}, Final Price ${discountedPrice}`;
+            }
+
+            function FindClosestMilkStore(time){
+                
+                let closestStore = "";
+
+                switch(true){
+                    case (time >= 8 && time < 13) || (time >= 14 && time < 19):
+                        closestStore = "Молокозавод";
+                         break;
+                    case (time >= 9 && time < 14) || (time >= 15 && time < 17):
+                        closestStore = "Магазин";
+                        break;
+                    case time >= 7 && time < 20:
+                        closestStore = "Рынок";
+                        break;
+                }
+
+                return `Time = ${time}, Closest OPEN store = ${closestStore}`;
+            }
+            
+            
+        </script>
+    </body>
+
+</html>

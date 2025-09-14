@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            #3
+        </title>
+    </head>
+    <body>
+        <h2>Задания из файла 3</h2>
+        <script>         
+            
+            function calculateEvenOddDayProteinNeeds(days, evenDayProteinAmount, oddDayProteinAmount){
+                
+                let evenDays = days % 2 == 0 ? days / 2 : days / 2 - 0.5;
+                let oddDays = days - evenDays; 
+                let totalProtein = (evenDays * evenDayProteinAmount) + (oddDays * oddDayProteinAmount);
+
+                return `Total days: ${days}, \nevenDayProteinAmount = ${evenDayProteinAmount}, evenDays: ${evenDays}, \noddDayProteinAmount = ${oddDayProteinAmount}, oddDays = ${oddDays}, \nTotal Protein = ${totalProtein}`;
+            }
+
+            function calculateGeometricProgression(startNumber,multiplier, quantity){
+                
+                console.log(`Start: ${startNumber} \nMultiplier ${multiplier} \nQuantity ${quantity} \n`);
+                let risingNumber = startNumber;
+
+                console.log(risingNumber);
+                for(let i = 0; i < quantity; i++){
+                    risingNumber *= multiplier;
+                    console.log(risingNumber);
+                }
+                
+                return 'Ended';
+            }
+
+            function calculateSumOneToN(lastNumber){
+                let result = lastNumber * (lastNumber - 1) / 2;
+                return `Сумма от 1 до ${lastNumber}, Результат ${result}`;
+            }
+
+            function calculateEvenMultipliedOneToN(lastNumber){
+                
+                let result = 1;
+                for(let i = 1; i <= lastNumber; i++){
+                    if(i % 2 == 0){
+                        result *= i; 
+                    }
+                }
+                return `Умножение четных от 1 до ${lastNumber}, Результат ${result}`;
+            }
+
+            function findAllDenominators(number){
+                for(let i = 1; i < number; i++){
+                    if(number % i == 0){
+                        console.log(`${number} цело делится на ${i}`);
+                    }
+                }
+            }
+
+            function getDigitAmount(number){
+                let quantity = String(number).length;
+                return `число ${number}, количество цифр ${quantity}`;
+            }
+
+            function calculateProteinNeeds(days, workDayAmount, weekendAmount, period){
+                let weekDays = ["понедельник","вторник","среда","четверг","пятница","суббота","воскресенье"];
+                let total = 0;
+
+                for(let i = 1; i <= days; i++){
+                    let amount = (i % 7) == 0 || (i % 7) == 6 ? weekendAmount : workDayAmount;
+                    let isOnPeriodDay = i % period == 0;
+                    total += isOnPeriodDay ? amount : 0;
+                    console.log(`${i} день, ${weekDays[(i-1) % 7]} -- ${isOnPeriodDay} : Amount ${amount}`);
+                }
+
+                console.log("");
+                
+                return `Workday protein: ${workDayAmount}, Weekend protein: ${weekendAmount} \nPeriod: once in ${period} days \nDays ${days} \n ||TOTAL: ${total}||`;
+
+            }
+
+            function isNumberPalindrome(number){
+                number = String(number);
+                let reversed = number.split('').reverse().join('');
+                return `Number: ${number}, isPalindrome: ${number == reversed}`;
+            }
+
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        #5
+    </title>
+</head>
+
+<body>
+    <h2>Задания из файла 5</h2>
+    <script>
+
+        // checkVehicle(2,99);
+        const checkVehicle = (wheelAmount, weight) => wheelAmount == 2 && weight < 100 ? 'Парковка разрешена' : 'Вам здесь не место'
+
+        // calculatePressure(1000,5);
+        const calculatePressure = (liquidDensity, depth) => Math.round(liquidDensity * 9.8 * depth);
+
+        // getDiet([10,20,30,40,90],100);
+        const getDiet = (foodCaloriesArray, dailyCalorieLimit) => {
+            let currentCalorieAmount = 0;
+            let foodCount = foodCaloriesArray.length;
+
+            for (var finalFoodCount = 0; finalFoodCount < foodCount; finalFoodCount++) {
+                if (currentCalorieAmount + foodCaloriesArray[finalFoodCount] > dailyCalorieLimit) {
+                    break;
+                }
+                currentCalorieAmount += foodCaloriesArray[finalFoodCount];
+
+            }
+
+            return finalFoodCount;
+        }
+
+        // calculate(3,2,"x");
+        function calculate(firstNumber, secondNumber, operator) {
+            firstNumber = Number(firstNumber);
+            secondNumber = Number(secondNumber);
+
+            switch (operator) {
+                case "+":
+                    return firstNumber + secondNumber;
+                case "-":
+                    return firstNumber - secondNumber;
+
+                case "x":
+                case "X":
+                case "*":
+                    return firstNumber * secondNumber;
+                case ":":
+                case "/":
+                    return firstNumber / secondNumber;
+                case "^":
+                    return Math.pow(firstNumber, secondNumber);
+            }
+
+        }
+
+        // getDocumentsNumbers(["01112018","20092017","05102017","12052018","04072005","02022018"],2018);
+        const getDocumentsNumbers = (documentNames, year) => {
+            let documentYears = documentNames.filter(name => name.substr(4));
+            return documentYears.filter(documentYear => documentYear.indexOf(year) > 0).length
+        }
+
+        const calculateExpenses = netSalary => {
+            const incomeTax = 13;
+            const contributions = 30;
+
+            let withTax = (netSalary / (100 - incomeTax)) * 100
+            return Math.round(withTax + (withTax * (contributions / 100)));
+        }
+
+        // getYears(2018,2045,11);
+        const getYears = (startYear, endYear, digitSum) => {
+            let filteredYears = [];
+            for (let i = startYear; i <= endYear; i++) {
+                let yearString = String(i);
+
+                let yearDigitSum = yearString.split('').reduce((accumulator, currentValue) => Number(accumulator) + Number(currentValue));
+
+                if (yearDigitSum == digitSum) {
+                    filteredYears.push(yearString);
+                }
+                //console.log(`yearStr ${yearString}, yearDigitSum ${yearDigitSum}, digitSum ${digitSum}`);
+            }
+
+            return filteredYears;
+        }
+
+        // getDayOfWeek("вторник",15);
+        const getDayOfWeek = (firstWeekDayOfTheMonth, currentDay) => {
+            const weekDays = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"];
+            const weekDayCount = weekDays.length;
+            const firstDay = weekDays.indexOf(firstWeekDayOfTheMonth);
+
+            return weekDays[(currentDay + (firstDay - 1)) % weekDayCount];
+        }
+
+        // calcurateRoots(1,-2,-3)
+        const calculateRoots = (a,b,c) =>{
+            const discriminant = (b * b) - (4 * a * c);
+            
+            switch(true){
+                case discriminant < 0:
+                    return 'Корней нет';
+                case discriminant === 0:
+                    return `Корень равен ${-b / (2 * a)}`
+                case discriminant > 0:
+                    return `Первый корень равен ${(-b + Math.sqrt(discriminant))/(2*a)}, второй корень равен ${(-b - Math.sqrt(discriminant))/(2*a)}`
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

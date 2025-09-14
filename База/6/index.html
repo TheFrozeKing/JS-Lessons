@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        #6
+    </title>
+</head>
+
+<body>
+    <h2>Задания из файла 6</h2>
+    <script>
+        
+        //#region №1
+        class Player {
+            constructor(name, goals, passes) {
+                this.name = name;
+                this.goals = goals;
+                this.passes = passes;
+            }
+        }      
+        
+        const p1 = new Player("John French", 2,2);
+        const p2 = new Player("John Bench", 3,3);
+        const p3 = new Player("John Branch", 4,4);
+        const p4 = new Player("John Trench", 5,5);
+
+        //getStatistics(p1,p2,p3,p4)
+        const getStatistics = (...players) => {
+            class CalculatedPlayer { // класс локальный к методу
+                
+                constructor(name, goals, passes, coefficient, percent) {
+                    this.name = name;
+                    this.goals = goals;
+                    this.passes = passes;
+                    this.coefficient = coefficient;
+                    this.percent = percent;
+                }
+            }
+
+            let totalGoals = players.reduce((accumulator, value) => accumulator += value.goals, 0);
+
+            const calculateCoefficient = (goals, passes) => (goals * 2) + passes;
+            const calculatePercent = goals => Math.round((goals / totalGoals) * 100);
+
+            let calculatedPlayers = [];
+            players.forEach((player) => calculatedPlayers.push(new CalculatedPlayer(player.name, player.goals, player.passes, calculateCoefficient(player.goals, player.passes), calculatePercent(player.goals))))
+            return calculatedPlayers;
+        }    
+        
+        //#endregion
+                
+        //#region №2
+        class House{
+            constructor(rooms, floors, material, coefficient){
+                this.rooms = rooms;
+                this.floors = floors;
+                this.material = material;
+                this.coefficient = coefficient;
+            }
+            
+            calculateSquare = () => this.floors * this.rooms * this.coefficient;
+
+            calculatePrice = () => this.calculateSquare() * materialPrice[this.material];
+        }
+
+        const h1 = new House(1,1,"wood",2);
+        const h2 = new House(2,3,"stone",3);
+        const h3 = new House(4,4,"brick",4);
+
+        const materialPrice = {"wood" : 200, "stone" : 400, "brick" : 600};
+        //#endregion
+
+        //#region №3
+
+        const englishDictionary = {"утро" : "morning", "день" : "afternoon", "вечер" : "evening", "ночь" : "night", "тестировщик" : "tester", "инженер" : "engineer", "разработчик" : "developer", "менеджер" : "manager"}
+
+        const translate = (toTranslate, englishDictionary) => `${toTranslate.toLowerCase()} по-английски: ${englishDictionary[toTranslate.toLowerCase()]}`;
+        
+        //#endregion
+
+        //#region №4
+
+        // getRepeats("а","б","б","в","в","в","г","г","г","г")
+        const getRepeats = (...wordArray) => {
+            let repeatAmounts = {};
+            
+            wordArray.forEach(word => {
+                repeatAmounts[word] = repeatAmounts[word] === undefined ? 1 : repeatAmounts[word] + 1;
+            });
+
+            return repeatAmounts;
+        }
+
+        //#endregion
+
+        //#region №5
+
+        //getZippedArrays(["a","b","c","d"],["x","y","z","w"])
+        const getZippedArrays = (keys,values) => {      
+            let zippedArray = {};
+            
+            keys.forEach((key, index) => {
+                zippedArray[key] = values[index];
+            });
+
+            //let keyAmount = keys.length;
+
+            //for(let i = 0; i < keyAmount; i++){
+            //    zippedArray[keys[i]] = values[i];
+            //}
+
+            return zippedArray;
+        }
+
+        //#endregion
+       
+        //#region №6
+
+        //getSortedArray();
+
+        class Flower{
+            constructor(name, price){
+                this.name = name;
+                this.price = price;
+            }
+        }
+
+        const flowerArray = [new Flower("ирисы",1500),new Flower("фиалки",2500),new Flower("гвоздики",1000),new Flower("ромашки",1000),new Flower("тюльпаны",1200)];
+
+        // getSortedArray(flowerArray);
+        const getSortedArray = (toSort = [], key) =>  toSort.sort((a,b) => a[key] - b[key]);       
+        
+        //#endregion
+
+        //#region №7
+
+        const keys = ['имя',"любимый цвет", "любимое блюдо"]
+        const values = [
+            ["Василий","Красный","Борщ"],
+            ["Мария"],
+            ["Иннокентий","Желтый","Пельмени","18","Жигулевское"],
+            ["Владимир","Синий","Квас","22"]
+
+        ]
+
+        const getData = (keys = [],objectValues = [[]]) => {
+            let objectCount = objectValues.length;
+            let keyCount = keys.length;
+            let outputData = [];
+
+            for(let i = 0; i < objectCount; i++){
+                let newObject = {};
+                
+                for(let j = 0; j < keyCount; j++){
+                    if(objectValues[i][j] === undefined){
+                        continue;
+                    } 
+
+                    newObject[keys[j]] = objectValues[i][j];
+                }
+
+                outputData.push(newObject);
+            }
+            return outputData;
+        }        
+
+        //#endregion
+
+    </script>
+</body>
+
+</html>

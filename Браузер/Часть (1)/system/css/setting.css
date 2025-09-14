@@ -1,0 +1,83 @@
+@font-face {
+  font-weight: 700;
+  font-family: "PT Sans";
+  font-style: normal;
+  src: local("PT Sans"),
+    url("../fonts/ptsansbold.woff2") format("woff2"),
+    url("../fonts/ptsansbold.woff") format("woff");
+}
+
+body {
+  font-size: 16px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product {
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+}
+
+.products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 470px;
+  margin: 20px auto;
+  padding: 0;
+
+  list-style: none;
+}
+
+.product__title {
+  margin: 0 25px;
+  margin-bottom: 15px;
+
+  font-size: 18px;
+}
+
+.product__image {
+  -webkit-box-ordinal-group: 0;
+  -ms-flex-order: -1;
+  order: -1;
+  width: 200px;
+  height: 150px;
+  margin-bottom: 10px;
+}
+
+.product__discount {
+  min-height: 20px;
+  margin-bottom: 10px;
+
+  color: #999999;
+  text-decoration: line-through;
+}
+
+.product__price {
+  width: 80px;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 10px 30px;
+
+  color: #ffffff;
+
+  background: #ee3643;
+  border-radius: 3px;
+}

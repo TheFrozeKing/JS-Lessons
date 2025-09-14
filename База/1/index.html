@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            #1
+        </title>
+    </head>
+    <body>
+        <h2>Задания из файла 1</h2>
+        <script>
+            
+            function calculateTrainingProgram(timeInMinutes) // Works
+            {
+                let jumps = timeInMinutes / 10 * 3;
+                jumps = Math.floor(jumps);
+
+                return `За ${timeInMinutes} минут в соцсетях полагается ${jumps} прыжков.`
+            }
+            
+
+            function convertMoney(euroRate, euroAmount, dollarRate, dollarAmount) // Works
+            {
+                let rublesAmount = euroRate * euroAmount;
+                rublesAmount += dollarRate * dollarAmount;
+                
+                let output = `Курс евро: ${euroRate}, необходимо евро ${euroAmount}. Курс доллара: ${dollarRate}, необходимо долларов: ${dollarAmount}, Нужно рублей: ${rublesAmount}`;
+                return output;
+            }
+
+
+            function calculateDebt(travelCost, balance)
+            {
+                let debtAmount = travelCost - balance;
+                debtAmount *= 2;
+
+                return `Нужно на поездку: ${travelCost}, Баланс: ${balance}, Долги: ${debtAmount}`;
+            }
+
+            function calculateFlightTime(flightDistance, averageSpeed)
+            {
+                flightTime = flightDistance / averageSpeed;
+                flightTime = Math.round(flightTime);
+
+                return `Дистанция ${flightDistance}, Средняя скорость ${averageSpeed}, Время полета ${flightTime}`
+            }
+
+            function calculateTransferTimeFromMiles(routeDistance, averageSpeed)
+            {
+                routeTime = (routeDistance * 1.6) / averageSpeed;
+                routeTime = Math.round(routeTime);
+
+                return `Дистанция ${routeDistance}, Скорость ${averageSpeed}, Время ${routeTime}`
+            }
+
+
+            function convertFahrenheitToCelsius(fahrenheitTemperature){
+                let celsiusTemperature = (5/9) * (fahrenheitTemperature - 32);
+
+                return celsiusTemperature;
+            }
+
+            function calculateBodyMassIndex(length,weight, fatMass){
+                let bodyMassIndex = Math.round(weight / Math.pow(length,2));
+
+                let fatPercent = Math.round((fatMass / weight) * 100);
+
+                return `length = ${length}, weight = ${weight}, BMI = ${bodyMassIndex}, fatmass = ${fatMass}, fatPercentage = ${fatPercent}`;
+                
+            }
+
+
+            function calculateHypotenuse(firstLeg, secondLeg){
+                let hypotenuse = Math.sqrt(Math.pow(firstLeg,2) + Math.pow(secondLeg,2));
+                hypotenuse = Math.round(hypotenuse);
+                
+                let perimeter = firstLeg + secondLeg + hypotenuse;
+
+                return `firstLeg ${firstLeg}, secondLeg ${secondLeg}, hypotenuse ${hypotenuse}, perimeter ${perimeter}`;
+            } 
+
+            function calculateHeartrate(age, pulseAtRest, intensity){
+                let maxHeartrate = 220 - age;
+                let pulseAtWorkout = Math.round((maxHeartrate - pulseAtRest) * intensity + pulseAtRest);
+                return `age ${age}, pulseAtRest ${pulseAtRest}, intensity ${intensity}, pulseAtWorkout ${pulseAtWorkout}`
+            }
+
+            function calculateCalorieRate(weight, length, age, activityRate){
+                let metabolism = 88.362 + (13.397 * weight) + (4.799 * length) - (5.677 * age);
+
+                let calorieRate = metabolism * activityRate;
+                let proteinCalories = Math.round(calorieRate * 0.4);
+                let fatCalories = Math.round(calorieRate * 0.25);
+                let carbCalories = Math.round(calorieRate * 0.35);
+
+                return `Weight ${weight}, Height ${length}, Age ${age}, Activity ${activityRate}, Calories ${calorieRate}, proteinCalories ${proteinCalories}, fatCalories ${fatCalories}, carbCalories ${carbCalories}`;
+            }
+            
+        </script>
+    </body>
+
+</html>

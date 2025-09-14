@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        #4
+    </title>
+</head>
+
+<body>
+    <h2>Задания из файла 4</h2>
+    <script>
+
+        const decryptSymbols = (symbols, encodedSymbols) => {
+            let stringBuilder = []
+            let decodedMessage = "";
+
+            for (let i = 0; i < encodedSymbols.length; i++) {
+                stringBuilder.push(symbols[encodedSymbols[i]]);
+            }
+            
+            decodedMessage = stringBuilder.join('');
+
+            return decodedMessage;
+        }
+
+        // formShoppingList(["a","b","c"],["d","e","f"],["g","h","k"]);
+        function formSmoothieOrder(liquids, fruits, greens){
+            let chosenLiquid = Number(prompt("Pick a liquid! (number!)"));
+            while (Number.isNaN(chosenLiquid)) {
+                console.log("Pick a NUMBER");
+                chosenLiquid = Number(prompt("(NUMBER!) Pick a liquid! (NUMBER!)"));
+            }
+
+            let chosenFruit = Number(prompt("Pick a fruit! (number!)"));
+            while (Number.isNaN(chosenFruit)) {
+                console.log("Pick a NUMBER");
+                chosenFruit = Number(prompt("(NUMBER!) Pick a liquid! (NUMBER!)"));
+            }
+
+            let chosenGreen = Number(prompt("Pick a green! (number!)"));
+            while (Number.isNaN(chosenFruit)) {
+                console.log("Pick a NUMBER");
+                chosenGreen = Number(prompt("(NUMBER!) Pick a liquid! (NUMBER!)"));
+            }
+
+            return `Chosen liquid: ${liquids[chosenLiquid]}, \nChosen Fruit ${fruits[chosenFruit]}, \nChosen Green ${greens[chosenGreen]} }`;
+        }
+
+        // formShoppingList(["a","b","c"]);
+        const formShoppingList = (groceries) => {
+
+            let groceriesLength = groceries.length;
+            let stringBuilder = [];
+            let shoppingList = "";
+
+            for (let i = 0; i < groceriesLength; i++) {
+                stringBuilder.push(groceries[i]);
+            }
+
+            shoppingList = stringBuilder.join(', ');
+
+            return shoppingList;
+        }
+
+        const getLastIndex = (numbers, number) => numbers.lastIndexOf(number);
+
+        //packBaggage(["a","b","c","d","f","g","h"], 1,3); 
+        const packBaggage = (luggage, startIndex, quantity) => luggage.slice(startIndex, startIndex + quantity);
+
+        //getFilteredBookList(["a","bb","ccc","dddd","fffff","gggggg","hhhhhhh"], 1,3);
+        const getFilteredBookList = (books, minNumber, maxNumber) => {
+            let filteredBooks = books.filter(book => book.length >= minNumber && book.length <= maxNumber);
+            return filteredBooks;
+        }
+
+        //getFilteredUsers(["a obama","b hellen","c obama","d","f hellen","g","h obama"], "obama");
+        const getFilteredUsers = (usersData, query) => usersData.filter(name => name.indexOf(query) > 0).length;
+
+        //calculateFibonacci([0,2],9);
+        const calculateFibonacci = (fibonacciNumbers, quantity) => {
+            let currentCount = fibonacciNumbers.length;
+
+            for(let i = currentCount; i < currentCount + quantity; i++){
+                let fibNumber = fibonacciNumbers[i-2] + fibonacciNumbers[i-1];
+                fibonacciNumbers.push(fibNumber); 
+            }
+            return fibonacciNumbers;
+        }
+
+        const decipherCeaser = (symbols, encodedSymbols, shift) =>{
+            let symbolCount = symbols.length;
+            let decodedSymbols= encodedSymbols.filter(index => symbols[(index + shift)%symbolCount]);
+            
+            return decodedSymbols.join('');
+        }
+
+
+
+    </script>
+</body>
+
+</html>
