@@ -25,7 +25,7 @@ let assortmentData = [
 
 const setItemStatuses = itemData => {
     let itemCards = document.querySelectorAll('.good');
-
+    
     for(let i = 0; i < itemCards.length; i++){
         let card = itemCards[i];
         let data = itemData[i];

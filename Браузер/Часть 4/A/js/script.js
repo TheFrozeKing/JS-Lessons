@@ -15,10 +15,7 @@ const initializeButtons = photoArray => {
     
     imageButtons.forEach((button, index) => {
         button.addEventListener('click', (evt) => {
-            console.log(photoArray[index]);
             fullPhoto.src = photoArray[index];
-            console.log(fullPhoto);
-            console.log('click ' + index);
         })
     })
 }

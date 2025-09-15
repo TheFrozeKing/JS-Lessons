@@ -5,7 +5,7 @@ const initializeButtons = () => {
 
     const openButtons = document.querySelectorAll('.button-show');
     openButtons.forEach(button => button.addEventListener('click', (evt) => {
-        evt.preventDefault();
+        //evt.preventDefault();
         popup.classList.add('popup--open');
     }));
 
