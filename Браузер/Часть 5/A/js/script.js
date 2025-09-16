@@ -1,45 +1,54 @@
 'use strict';
 
-const createElement = (tagName, className, text = '', appendTo) =>{
-    let newElement = document.createElement(tagName);
-    if(className != ''){
-        newElement.classList.add(className);
-    }
-    newElement.textContent = text;
-
-    appendTo.appendChild(newElement);
-    if(appendTo){
-    }
-    return newElement;
-}
+const todoList = document.querySelector('.todo-list');
+const itemForm = document.querySelector('.add-form');
+const inputField = document.querySelector('.add-form-input');
+const taskTemplate = document.querySelector('#task-template').content.querySelector('.todo-list-item');
 
 const initializeTask = task => {
-
     const checkbox = task.querySelector('.todo-list-input');
     checkbox.addEventListener('change', () => {
         task.remove();
+        toggleEmptyMessage();
     });
 }
 
 const createTask = (appendTo, text) => {
-    const newTask = createElement('li','todo-list-item','', appendTo);
-
-    const label = createElement('label','','',newTask);
-
-    const input = createElement('input','todo-list-input', '',label);
-    input.type = 'checkbox';
-
-    const span = createElement('span','',text,label)
+    const newTask = taskTemplate.cloneNode(true);
+    todoList.appendChild(newTask);
+    
+    const span = newTask.querySelector('span');
+    span.textContent = text;
     
     initializeTask(newTask);
 }
 
 
-const todoList = document.querySelector('.todo-list');
+const addTask = evt => {
+    evt.preventDefault();
+    createTask(todoList, inputField.value);
 
-for (const task of todoList.children) {
-    initializeTask(task);
-};
+    toggleEmptyMessage();
+    inputField.value = '';
+}
+
+const toggleEmptyMessage = () =>{
+    if(todoList.children.length > 0){
+        emptyMessage.classList.add('hidden');
+        return;
+    }
+    emptyMessage.classList.remove('hidden');
+}
+
+const prewarm = () => {    
+    for (const task of todoList.children) {
+        initializeTask(task);
+    };
+    itemForm.addEventListener('submit', addTask);
+}
+
+const emptyMessage = document.querySelector('.empty-tasks');
+prewarm();
 
 
 
