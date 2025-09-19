@@ -1,22 +1,30 @@
 'use strict';
 
-let list = document.querySelector('.todo-list');
-let input = document.querySelector('.todo-input');
-let form = document.querySelector('.todo-form');
-let priority = document.querySelector('.todo-priority');
+const list = document.querySelector('.todo-list');
+const input = document.querySelector('.todo-input');
+const form = document.querySelector('.todo-form');
+const priority = document.querySelector('.todo-priority');
 
 priority.onclick = function () {
-    priority.classList.toggle('is-important');
-    if (priority.classList.contains('is-important')) {
-        priority.textContent = 'Важная задача';
-    } else {
-        priority.textContent = 'Обычная задача';
-    }
+    priority.classList.toggle('is-important');    
+    priority.textContent = priority.classList.contains('is-important') ? 'Важная задача' : 'Обычная задача';
 };
+
+const addTask = (taskName, isImportant) => {
+    const newTask = document.createElement('li');
+    newTask.textContent = taskName;
+    if(isImportant){
+        newTask.classList.add('is-important');
+    }
+    list.appendChild(newTask);
+}
 
 form.onsubmit = function (evt) {
     evt.preventDefault();
+    addTask(input.value, priority.classList.contains('is-important'));
+    input.value = '';
 };
+
 
 /*
 1. Каждая задача в списке — это элемент li. При отправке формы (переменная form) новая задача добавляется в конец списка (переменная list).

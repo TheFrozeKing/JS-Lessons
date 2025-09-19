@@ -7,6 +7,7 @@ const taskTemplate = document.querySelector('#task-template').content.querySelec
 
 const initializeTask = task => {
     const checkbox = task.querySelector('.todo-list-input');
+    checkbox.checked = false;
     checkbox.addEventListener('change', () => {
         task.remove();
         toggleEmptyMessage();
@@ -22,7 +23,6 @@ const createTask = (appendTo, text) => {
     
     initializeTask(newTask);
 }
-
 
 const addTask = evt => {
     evt.preventDefault();
@@ -50,6 +50,3 @@ const prewarm = () => {
 const emptyMessage = document.querySelector('.empty-tasks');
 prewarm();
 
-
-
-//createTask(todoList, 'купить слона');
