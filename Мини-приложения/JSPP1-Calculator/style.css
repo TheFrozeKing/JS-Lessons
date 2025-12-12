@@ -25,27 +25,29 @@ h2 {
     border-style: solid;
     border-color: #ebb41c;
     background-color: white;
-    margin: 20px;
+    /* margin: 20px; */
+    margin-top: 20px;
     align-items: stretch;
     display: flex;
-    color: gray;
-    font-size: 20px;
+    color: #eb6c1c;
+    font-size: 25px;
+
+    transition: border-color 0.3s ease;
 } 
 
-button {
-    width: 200px;
-    height: 60px;
-    border-radius: 15px;
-    box-shadow: 0px 5px 5px rgb(194, 194, 194);
-    border-width: 4px;
-    border-style: solid;
+input::placeholder {
+    color: lightgray;
+}
+
+input:hover {
+
+    border-color: #eb6c1c;
+    transition: border-color 0.3s ease;
+}
+
+input:active {
     border-color: #ebb41c;
-    background-color: #ffc300;
-    margin: 20px;
-    align-items: stretch;
-    display: flex;
-    color: #ebffaa;
-    font-size: 20px;
+    transition: border-color 0.3s ease;
 }
 
 .input-name {
@@ -57,7 +59,60 @@ button {
 .input-block {
     display: flex;
     justify-content: center;
-    width: 650px;
+    width: fit-content;
     height: 90px;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+button {
+    width: 200px;
+    height: 60px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 1px #ebb41c;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #ebb41c;
+    background-color: #ffc300;
+    margin: 20px;
+    color: #ebffaa;
+    font-size: 30px;
+    position: absolute;
+    
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    transition: background-color 0.3s ease, 
+                border-color 0.3s ease, 
+                box-shadow 0.3s ease;
+}
+
+button:hover {
+    box-shadow: 0px 5px 1px #eb6c1c;
+    border-color: #eb6c1c;
+    background-color: #ff8000;
+
+    transition: background-color 0.3s ease, 
+                border-color 0.3s ease, 
+                box-shadow 0.1s ease;
+}
+
+button:active {
+    box-shadow: 0px 0px 0px;
+    border-color: #eb6c1c;
+    border-width: 5px;
+    background-color: #ff8000;
+
+    transition: background-color 0.3s ease, 
+                border-color 0.3s ease;
+}
+
+.button-container {
+    width: 550px;
+    height: 200px;
+    position: relative;
     margin: 0 auto;
 }

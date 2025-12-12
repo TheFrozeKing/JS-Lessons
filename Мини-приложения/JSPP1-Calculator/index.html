@@ -11,23 +11,25 @@
     <div style="margin-top: 2em;">
         <h1 style="display: inline-block;">Калькулятор 🤓</h1>
     </div>
-
-    <div>
-            <div class="input-block">
-                <h2 class="input-name">Операнд 1</h2>
-                <input type="text" placeholder="Введите число..."></input>
-            </div>
-            <div class="input-block">
-                <h2 class="input-name">Операнд 2</h2>
-                <input type="text" placeholder="Введите число..."></input>
-            </div>
-            <div class="input-block">
-                <h2 class="input-name">Результат</h2>
-                <input placeholder="" disabled></input>
-            </div>
+    <div class="input-block">
+        <h2 class="input-name">Операнд 1</h2>
+        <input type="number" name = "оп1" placeholder="Введите число..."></input>
+    </div>
+    <div class="input-block">
+        <h2 class="input-name">Операнд 2</h2>
+        <input type="number" name = "оп2" placeholder="Введите число..."></input>
+    </div>
+    <div class="input-block">
+        <h2 class="input-name">Результат</h2>
+        <input placeholder="" name = "рез" disabled></input>
     </div>
 
-    <button name="test"> обама</button>
+    <div class="button-container">
+        <button id="add" style="top: 0; left: 0;">СЛОЖИТЬ</button>
+        <button id="subtract" style="top: 0; right: 0;">ВЫЧЕСТЬ</button>
+        <button id="multiply" style="bottom: 0; left: 0;">УМНОЖИТЬ</button>
+        <button id="divide" style="bottom: 0; right: 0;">ДЕЛИТЬ</button>
+    </div>
 
-    
+    <script src="app.js"></script>
 </body>
