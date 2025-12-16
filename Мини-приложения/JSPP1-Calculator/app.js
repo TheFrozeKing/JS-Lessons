@@ -18,7 +18,7 @@ const performCalculations = (operationId) => {
 
     }
     else if(operationId === "divide"){
-        if(num1 === 0 || num2 === 0){
+        if(num2 === 0){
             alert('Нельзя делить на 0!');
             return;
         }

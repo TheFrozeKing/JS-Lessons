@@ -1,63 +1,101 @@
 body {
-    background-color: #dff9ff;
+    background: linear-gradient(360deg, #001B86 0%, #329BF4 50.48%, #AEE4FF 100%);
     color: #63b4ff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     margin: 0px auto;
+    height: 100vh;
 }
 
 h1, h2 {
-    font-size: 32px;
-    font-weight: 500;
+    position: relative;
+    margin-top: 0;
+    font-size: 48px;
+    font-weight: 1000;
 }
 
 h3{
-    font-size: 16px;
+    font-size: 25px;
     align-content: center;
     text-align: center;
     margin-top: 40px;
     font-weight: 400;
 }
 
-.input-block {
+.container {
     display: flex;
     justify-content: center;
-    /* width: fit-content; */
-    width: 527px;
-    height: 90px;
+    width: fit-content;
     margin: 0 auto;
-    gap: 10px;
+    gap: 5vw;
+}
+
+.rectangle {
+    width: 80vw;
+    height: 40vh;
+    margin-top: 30vh;
+    border-radius: 75px;
+
+    background: #D9EFFE;
+    background: linear-gradient(180deg, rgba(217, 239, 254, 1) 10%, rgba(183, 199, 230, 1) 100%);
+    opacity: 0.7;
+
+    display: flex;
+    justify-content: center;
+}
+
+img{
+    width: 35vh;
+    height: 35vh;
+    border-radius: 20%;
+    margin-top: 2.5vh;
+    opacity: 1;
+
+}
+
+.text-container {
+    width: 30vh;
+    height: 35vh;
+    margin-top: 2.5vh;
+    opacity: 1;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.left-button
+{
+    position: absolute;
+    left: 10vw;
+}
+.right-button{
+    position: absolute;
+    right: 10vw;
 }
 
 button {
-    width: 300px;
-    outline: none;
-    height: 50px;
-    border-radius: 30px;
-    border-style: none;
-    background-color: #63b4ff;
-    color: white;
-    font-size: 28px;
-    
-    margin: 25px 0px 0px 0px;
-    text-align: center;
+    width: 8vh;
+    height: 40vh;
+    color: blue;
+    border: none;
+    font-size: 5vh;
+    background: #8DB5FF;
+    border-radius: 100px;
 
     transition: background-color 0.1s ease;
 }
 
 button:hover {
-    background-color: #006fd7;
-    transition: background-color 0.1s ease; 
+    background-color: #73a4ff;
+
+    transition: background-color 0.1s ease;
 }
 
 button:active {
-    background-color: #bde6ff;
+    background-color: #5490ff;
+
     transition: background-color 0.1s ease;
 }
 
 
-
-
-.hidden {
-    display: none !important;
-}

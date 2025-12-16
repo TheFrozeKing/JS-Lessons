@@ -1,109 +1,57 @@
 'use strict'
 
-const button = document.querySelector('button');
+const leftButton = document.querySelector('.left-button');
+const rightButton = document.querySelector('.right-button');
 
-const inputBlocks = document.querySelectorAll('.input-block')
-const inputs = document.querySelectorAll('input');
-const resultDiv = document.querySelector('.hidden')
-const toggleHiddenOn = [...inputBlocks, resultDiv]
+const image = document.querySelector('img');
+const title = document.querySelector('h2');
+const text = document.querySelector('h3');
 
-const resultTexts = [resultDiv.childNodes[1],  resultDiv.childNodes[3]];
-
-const norms = {
-    male: [
-        20,
-        25,
-        30,
-        40
-    ],
-    female: [
-        19,
-        24,
-        30,
-        40
-    ]
-};
-
-
-let lastResult = '';
-
-const colors = {
-    negative: [
-        'negative-result', 'button-negative-result'
-    ],
-    mid: [
-        'mid-result', 'button-mid-result'
-    ],
-    positive: [
-        'positive-result', 'button-positive-result'
-    ]
-}
-
-
-button.addEventListener('click', (evt) => {    
-    if(lastResult === ''){
-        const age = Number(inputs[0].value);
-        const height = Number(inputs[1].value);
-        const weight = Number(inputs[2].value);
-        const gender = inputs[3].checked ? 'male' : 'female';
-        
-        console.log(`${age}, ${height}, ${weight}, ${gender}`);
-        if(age === 0 || height === 0 || weight === 0){
-            alert('Заполните все поля');
-            return;
-        }
-        calculateBMI(age, height, weight, gender);
+const objects = [
+    {
+        name : "Алмаз",
+        imgUrl : 'img/diamond.png',
+        text : "Алмаз — минерал, который представляет собой одну из аллотропных модификаций углерода. Без доступа воздуха алмаз постепенно переходит в графит, кристаллическая решетка которого отличается от строения алмаза."
+    },
+    {
+        name : "Рубин",
+        imgUrl : 'img/ruby.jpg',
+        text : "Рубин — разновидность корунда, относится к классу оксидов, тригональная сингония, драгоценный камень красного цвета. "
+    },
+    {
+        name : "Изумруд",
+        imgUrl : 'img/emerald.webp',
+        text : "Изумруд — драгоценный прозрачный минерал из группы берилла, знаменитый своим насыщенным зеленым цветом, который обусловлен примесями хрома и ванадия."
     }
-    else{
-        document.body.classList.toggle(colors[lastResult][0]);
-        button.classList.toggle(colors[lastResult][1]);
-        button.textContent = 'Рассчитать';
-        lastResult = '';
-    }
-    toggleHiddens();
+];
+
+
+let currentObject = 0;
+
+leftButton.addEventListener('click', (evt) => {
+    switchObject(-1)
 })
 
-const toggleHiddens = () => {
-    toggleHiddenOn.forEach(element => {
-            element.classList.toggle('hidden');
-        });
+rightButton.addEventListener('click', (evt) => {
+    switchObject(1)
+})
+
+const switchObject = direction => {
+    currentObject += direction;
+    currentObject = clamp(currentObject, 0, objects.length - 1);
+
+    displayInfo();
 }
 
-const calculateBMI = (age, height, weight, gender) => {
-    
 
-    const bmi = Math.floor(weight / Math.pow((height/100),2));
-    const normIncrease = age < 20 ? 0 : Math.floor((age - 20) / 10); 
-    
-    const genderedNorms = norms[gender];
-    let outputText = '';
+const displayInfo = () => {
+    const obj = objects[currentObject];
 
-    resultTexts[0].textContent = 'Ваш ИМТ: ' + bmi;
-
-    if(bmi < genderedNorms[0] + normIncrease){
-        outputText = 'У вас недостаточный вес!'
-        lastResult = 'negative';
-    }
-    else if(bmi >= genderedNorms[0] + normIncrease && bmi < genderedNorms[1] + normIncrease){
-        outputText = 'Ваш вес в пределах нормы!'
-        lastResult = 'positive';
-    }
-    else if(bmi >= genderedNorms[1] + normIncrease && bmi < genderedNorms[2] + normIncrease){
-        outputText = 'У вас избыточный вес!'
-        lastResult = 'mid';
-    }
-    else if(bmi >= genderedNorms[2] + normIncrease && bmi < genderedNorms[3] + normIncrease){
-        outputText = 'У вас склонность к ожирению!'
-        lastResult = 'negative';
-    }
-    else if(bmi >= genderedNorms[3] + normIncrease){
-        outputText = 'У вас сильное ожирение!'
-        lastResult = 'negative';
-    }
-
-    document.body.classList.toggle(colors[lastResult][0]);
-    button.classList.toggle(colors[lastResult][1]);
-    button.textContent = 'Еще раз';
-    resultTexts[1].textContent = outputText;
+    image.src = obj.imgUrl;
+    title.textContent = obj.name;
+    text.textContent = obj.text;
 }
 
+function clamp(value, min, max) {
+  return Math.max(min, Math.min(value, max));
+}
