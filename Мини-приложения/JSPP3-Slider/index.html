@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" , href="styles/toggleInputStyle.css" />
+    <link rel="stylesheet" , href="styles/numberInputStyle.css" />
+    <link rel="stylesheet" , href="styles/resultStyle.css" />
+    <link rel="stylesheet" , href="styles/style.css" />
+
+    <title>Слайдер</title>
+</head>
+
+<body>
+    <div style="margin-top: 2em;">
+        <h1 style="display: inline-block;">Калькулятор Индекса массы тела</h1>
+    </div>
+    <div class="input-block" hidden>
+        <h2 class="input-name">Возраст:</h2>
+        <input type="number" class="number-input" placeholder="Введите значение..."></input>
+    </div>
+    <div class="input-block">
+        <h2 class="input-name">Рост:</h2>
+        <input type="number" class="number-input" placeholder="Введите значение..."></input>
+    </div>
+    <div class="input-block">
+        <h2 class="input-name">Вес:</h2>
+        <input type="number" class="number-input" placeholder="Введите значение..."></input>
+    </div>
+    <div class="input-block">
+        <h2 class="input-name">Пол:</h2>
+        <div class="toggle-container">
+            <label class="toggle-input">
+                <input type="radio" name="gender" />
+                <span class="checkmark"></span>
+            </label>
+            <h3>Мужской</h3>
+
+            <label class="toggle-input">
+                <input type="radio" name="gender" />
+                <span class="checkmark"></span>
+            </label>
+            <h3>Женский</h3>
+        </div>
+
+    </div>
+
+    <div class="hidden">
+        <h2>Ваш ИМТ: 24</h2>
+        <h2>Ваш вес в пределах нормы!</h2>
+    </div>
+
+    <button>Рассчитать</button>
+</button>
+
+    <script src="app.js"></script>
+</body>

@@ -1,0 +1,26 @@
+.positive-result {
+    color: #2de300;
+    background-color: #dfffea;
+}
+
+.button-positive-result {
+    background-color: #2de300;    
+}
+
+.mid-result {
+    color: #e3c800;
+    background-color: #fbffdf;
+}
+
+.button-mid-result {
+    background-color: #e3c800;    
+}
+
+.negative-result {
+    color: #e34400;
+    background-color: #ffe8df;
+}
+
+.button-negative-result {
+    background-color: #e34400;    
+}

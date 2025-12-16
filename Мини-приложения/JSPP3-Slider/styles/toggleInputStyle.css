@@ -1,0 +1,43 @@
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; 
+    margin-right: 140px;
+}
+
+.toggle-input {
+    width: 19px;
+    height: 19px;
+    border: solid #63b4ff;
+    border-radius: 50%;
+    border-width: 4px;
+
+    background-color: white;
+    display: flex;
+    
+    font-size: 20px;
+    margin-top: 45px;
+
+    justify-content: center;
+    align-items: center;
+
+    transition: border-color 0.3s ease;
+}
+
+.toggle-input .checkmark {
+    width: calc(100% - 5px);
+    height: calc(100% - 5px);
+    border-radius: 50%;
+    background-color: #63b4ff;
+    display: inline-block; 
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.toggle-input input {
+    display: none;
+}
+
+.toggle-input input:checked + .checkmark {
+    opacity: 1;
+}
