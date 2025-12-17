@@ -1,11 +1,10 @@
 body {
-    /* background: linear-gradient(360deg, #001B86 0%, #329BF4 50.48%, #AEE4FF 100%); */
-    /* color: #63b4ff; */
+    background: linear-gradient(360deg, #001B86 0%, #329BF4 50.48%, #AEE4FF 100%);
+    color: #63b4ff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     margin: 0px auto;
     height: 100vh;
-    transition: background 0.3s ease;
 }
 
 h1, h2 {

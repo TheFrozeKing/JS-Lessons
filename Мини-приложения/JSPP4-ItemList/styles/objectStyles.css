@@ -1,0 +1,83 @@
+/* Diamond */
+
+.diamond-body {
+    background: linear-gradient(360deg, #001B86 0%, #329BF4 50.48%, #AEE4FF 100%);
+    color: #63b4ff;
+}
+
+.diamond-rectangle {
+    background: linear-gradient(180deg, rgba(217, 239, 254, 1) 10%, rgba(183, 199, 230, 1) 100%);
+}
+
+.diamond-button {
+    color: blue;
+    background: #8DB5FF
+}
+
+.diamond-button:hover {
+    background-color: #73a4ff;
+
+    transition: background-color 0.1s ease;
+}
+
+.diamond-button:active {
+    background-color: #5490ff;
+
+    transition: background-color 0.1s ease;
+}
+
+/* Ruby */
+
+.ruby-body {
+    background: linear-gradient(360deg, #860000 0%, #f43232 50.48%, #ffaeae 100%);
+    color: #ff6363;
+}
+
+.ruby-rectangle {
+    background: linear-gradient(180deg, rgb(254, 217, 217) 10%, rgb(183, 199, 230) 100%);
+}
+
+.ruby-button {
+    color: rgb(255, 0, 0);
+    background: #ff8d8d
+}
+
+.ruby-button:hover {
+    background-color: #ff7373;
+
+    transition: background-color 0.1s ease;
+}
+
+.ruby-button:active {
+    background-color: #ff5454;
+
+    transition: background-color 0.1s ease;
+}
+
+/* Ruby */
+
+.emerald-body {
+    background: linear-gradient(360deg, #028600 0%, #32f463 50.48%, #aeffb2 100%);
+    color: #63b4ff;
+}
+
+.emerald-rectangle {
+    background: linear-gradient(180deg, rgb(218, 254, 217) 10%, rgb(183, 230, 189) 100%);
+}
+
+.emerald-button {
+    color: green;
+    background: #8dff9a
+}
+
+.emerald-button:hover {
+    background-color: #73ff78;
+
+    transition: background-color 0.1s ease;
+}
+
+.emerald-button:active {
+    background-color: #5aff54;
+
+    transition: background-color 0.1s ease;
+}
