@@ -17,7 +17,7 @@
     justify-content: center;
     align-items: center;
 
-    transition: border-color 0.3s ease;
+    transition: background-color 0.2s ease;
 }
 
 .toggle-input .selected-block {
@@ -41,7 +41,18 @@
     margin-top: 28px;
     color: #EEFF69;
     
+    transition: color 0.2s ease;
+
 }
+
+.toggle-input:hover {
+    background-color: rgb(183, 190, 81);
+}
+
+.toggle-input:hover p {
+    color: #96ff69;
+}
+
 .toggle-input input:checked + .selected-block {
     opacity: 1;
 }

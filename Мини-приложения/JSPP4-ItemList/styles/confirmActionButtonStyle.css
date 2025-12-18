@@ -1,0 +1,33 @@
+.button-confirm-action {
+    width: 224px;
+    height: 58px;
+    border: solid #72AF0E;
+    border-radius: 50px;
+    border-width: 4px;
+
+    background-color: #80BE51;
+
+    box-shadow: 0px 4px 4px #878787ad;
+    
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: 400;
+    color: #EEFF69;
+
+    justify-content: center;
+    align-items: center;
+
+    transition: background-color 0.2s ease,
+                color 0.2s ease;
+
+}
+
+.button-confirm-action:hover {
+    background-color: rgb(183, 190, 81);
+    color: #96ff69;
+}
+
+.button-confirm-action:active {
+    background-color: #EEFF69;
+    color: #80BE51;
+}

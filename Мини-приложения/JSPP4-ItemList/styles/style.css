@@ -33,30 +33,15 @@ h3{
     display: none !important;
 }
 
-button {
-    width: 8vh;
-    height: 40vh;
-    border: none;
-    font-size: 5vh;
-    /* color: blue; */
-    /* background: #8DB5FF; */
-    border-radius: 100px;
 
-    transition: background-color 0.1s ease;
+
+/* ВОТ ЭТУ ТЕМУ СНИЗУ Я В ГПТ СПРОСИЛ КАК УБРАТЬ КНОПКИ ИНКРЕМЕНТА У NUMBER ИНПУТА */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
 }
 
-
-
-/* button:hover {
-    background-color: #73a4ff;
-
-    transition: background-color 0.1s ease;
-} */
-
-/* button:active {
-    background-color: #5490ff;
-
-    transition: background-color 0.1s ease;
-} */
-
+input[type="number"] {
+    -moz-appearance: textfield;
+}
 

@@ -6,6 +6,8 @@
     <link rel="stylesheet" , href="styles/style.css" />
     <link rel="stylesheet" , href="styles/toggleInputStyle.css" />
     <link rel="stylesheet" , href="styles/itemStyle.css" />
+    <link rel="stylesheet" , href="styles/addActionStyle.css" />
+    <link rel="stylesheet" , href="styles/confirmActionButtonStyle.css" />
 
     <title>Список предметов</title>
 </head>
@@ -26,16 +28,33 @@
 
     <h3>Список товаров</h3>
 
-    <div class="item-container">
+    <div class="item-container ">
+        
+    </div>
+
+    <div class="add-item-container hidden">
+        <div class="input-block">
+            <h2 class="input-name">Название:</h2>
+            <input id="name-input" placeholder="Введите название..."></input>
+        </div>
+        <div class="input-block">
+            <h2 class="input-name">Цена:</h2>
+            <input type="number" id="price-input" placeholder="Введите цену..."></input>
+        </div>
+        <button class="button-confirm-action">Добавить</button>
+        <button class="button-confirm-action hidden">Изменить</button>
+    </div>
+
+    <template id="item-template">
         <div class="item">
-            <p>Молоко</p>
-            <p>100,00 р.</p>
+            <p id="name">Молоко</p>
+            <p id="price">100,00 р.</p>
             <div class="item-choice">
                 <button class="delete">Удалить</button>
                 <button class="edit">Редактировать</button>
             </div>
         </div>
-    </div>
+    </template>
 
     <script src="app.js"></script>
 </body>
