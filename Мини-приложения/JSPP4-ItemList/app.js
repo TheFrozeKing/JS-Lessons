@@ -103,6 +103,7 @@ const addItem = (name, price) => {
     nameText.textContent = name;
 
     price = price.replace('.',',');
+    price = price.indexOf(',') === -1 ? price + ',00' : price;
 
     priceText.textContent = price + " р.";
 
@@ -137,9 +138,10 @@ const editItem = () => {
     selectedObjectNameText.textContent = nameInput.value;
 
     let priceText = priceInput.value;
-    priceText = priceText.replace('.',',') + ' р.';
+    priceText = priceText.replace('.',',');
+    priceText = priceText.indexOf(',') === -1 ? priceText + ',00' : priceText;
 
-    selectedObjectPriceText.textContent = priceText;
+    selectedObjectPriceText.textContent = priceText + ' р.';
 
     nameInput.value = "";
     priceInput.value = "";
