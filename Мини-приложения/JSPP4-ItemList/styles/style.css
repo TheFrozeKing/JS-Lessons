@@ -1,13 +1,13 @@
 body {
-    background: linear-gradient(360deg, #001B86 0%, #329BF4 50.48%, #AEE4FF 100%);
-    color: #63b4ff;
+    background: linear-gradient(90deg,rgba(247, 255, 205, 1) 0%, rgba(191, 255, 142, 1) 100%);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     margin: 0px auto;
     height: 100vh;
+    color: #72AF0E;
 }
 
-h1, h2 {
+h1 {
     position: relative;
     margin-top: 0;
     font-size: 48px;
@@ -15,10 +15,9 @@ h1, h2 {
 }
 
 h3{
-    font-size: 25px;
+    font-size: 32px;
     align-content: center;
     text-align: center;
-    margin-top: 40px;
     font-weight: 400;
 }
 
@@ -27,50 +26,11 @@ h3{
     justify-content: center;
     width: fit-content;
     margin: 0 auto;
-    gap: 5vw;
-}
-
-.rectangle {
-    width: 80vw;
-    height: 40vh;
-    margin-top: 30vh;
-    border-radius: 75px;
-
-    background: linear-gradient(180deg, rgba(217, 239, 254, 1) 10%, rgba(183, 199, 230, 1) 100%);
-    opacity: 1;
-
-    display: flex;
-    justify-content: center;
-}
-
-img{
-    width: 35vh;
-    height: 35vh;
-    border-radius: 20%;
-    margin-top: 2.5vh;
-    opacity: 1;
-
-}
-
-.text-container {
-    width: 30vh;
-    height: 35vh;
-    margin-top: 2.5vh;
-    opacity: 1;
+    gap: 125px;
 }
 
 .hidden {
     display: none !important;
-}
-
-.left-button
-{
-    position: absolute;
-    left: 10vw;
-}
-.right-button{
-    position: absolute;
-    right: 10vw;
 }
 
 button {

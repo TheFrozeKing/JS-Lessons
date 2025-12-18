@@ -4,9 +4,38 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" , href="styles/style.css" />
+    <link rel="stylesheet" , href="styles/toggleInputStyle.css" />
+    <link rel="stylesheet" , href="styles/itemStyle.css" />
+
     <title>Список предметов</title>
 </head>
 
 <body>
+    <div class="container">
+        <label class="toggle-input">
+            <input type="radio" class="hidden" name="category" />
+            <span class="selected-block"></span>
+            <p>Список</p>
+        </label>
+        <label class="toggle-input">
+            <input type="radio" class="hidden" name="category" />
+            <span class="selected-block"></span>
+            <p>Добавить</p>
+        </label>
+    </div>
+
+    <h3>Список товаров</h3>
+
+    <div class="item-container">
+        <div class="item">
+            <p>Молоко</p>
+            <p>100,00 р.</p>
+            <div class="item-choice">
+                <button class="delete">Удалить</button>
+                <button class="edit">Редактировать</button>
+            </div>
+        </div>
+    </div>
+
     <script src="app.js"></script>
 </body>
