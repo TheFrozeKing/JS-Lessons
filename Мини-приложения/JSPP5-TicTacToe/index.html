@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" , href="styles/style.css" />
+    <link rel="stylesheet" , href="styles/playBoxesStyle.css" />
+    <link rel="stylesheet" , href="styles/startStyle.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <title>Крестики-нолики</title>
+</head>
+
+<body>
+    <h1 style="grid-area: title;">Крестики-нолики</h1>
+
+    <div class="start-container">
+        <input class="item"  placeholder="Игрок 1"></input>
+        <input class="item"  placeholder="Игрок 2"></input>
+        <button>СТАРТ</button>
+    </div>
+
+    <div class="game-container hidden">        
+        <div class="cell" style="grid-area: a1">
+            <div class="dot"></div>
+        </div>
+        <div class="cell" style="grid-area: b1">
+            <div class="cross">
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="cell" style="grid-area: c1"></div>
+        <div class="cell" style="grid-area: a2"></div>
+        <div class="cell" style="grid-area: b2"></div>
+        <div class="cell" style="grid-area: c2"></div>
+        <div class="cell" style="grid-area: a3"></div>
+        <div class="cell" style="grid-area: b3"></div>
+        <div class="cell" style="grid-area: c3"></div>
+    </div>
+
+
+
+    <script src="app.js"></script>
+</body>

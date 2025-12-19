@@ -1,0 +1,39 @@
+body {
+    background: linear-gradient(90deg, #FF0000 0%, #000DFF 100%);
+    font-family: Inter, sans-serif;
+    text-align: center;
+    margin: 0 auto;
+    height: 100%;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+h1 {
+    position: relative;
+    width: fit-content;
+    margin-top: 12%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 32px;
+    align-content: center;
+    text-align: center;
+    font-weight: 400;
+}
+
+
+
+
+.hidden {
+    display: none !important;
+}
