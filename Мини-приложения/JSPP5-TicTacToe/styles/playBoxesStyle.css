@@ -23,6 +23,16 @@
     align-items: center;
     text-align: center;
     display: flex;
+
+    transition: filter 0.1s ease;
+}
+
+.cell:hover {
+     filter: brightness(80%);
+}
+
+.cell:active {
+     filter: brightness(60%);
 }
 
 .dot{
