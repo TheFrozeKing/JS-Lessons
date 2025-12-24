@@ -1,0 +1,41 @@
+input{
+    background-color: white;
+    border: 1px solid #dadddf;
+    border-radius: 10px;
+    height: 50px;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 100%;
+    font-size: 18px;
+
+    font-family: Inter, sans-serif;
+     transition: border-color 0.1s ease;
+}
+
+.input-container p {
+    padding-left: 1px;
+}
+
+.input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    line-height: 10%;
+    gap: 5px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #525678;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input:hover {
+    border-color: #8d8f91;
+}

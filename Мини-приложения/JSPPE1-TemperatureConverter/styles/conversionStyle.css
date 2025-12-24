@@ -1,0 +1,33 @@
+.conversion-container {
+    display: flex;
+    flex-direction: column;
+    font-family: Inter, sans-serif;
+    background-color: #eff6ff;
+    border-radius: 10px;
+    padding: 15px 5px 0px 5px;
+    gap: 15px;
+}
+
+.conversion-container p {
+    font-weight: 400;
+    font-size: 14px;
+    color: #5f638a;
+}
+
+.conversion-container h1 {
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 50%;
+    height: fit-content;
+    margin-top: 0;
+}
+
+.conversion-container h2 {
+    max-height: 24px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 100%;
+    height: fit-content;
+    margin-top: 0;
+    margin-bottom: 32.160px;
+}

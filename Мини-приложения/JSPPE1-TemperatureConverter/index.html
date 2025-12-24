@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Конвертер температуры</title>
+    <link rel="stylesheet" , href="styles/style.css" />
+    <link rel="stylesheet" , href="styles/inputStyle.css" />
+    <link rel="stylesheet" , href="styles/conversionStyle.css" />
+
+    <!-- чтобы шрифт с гугла брался -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Конвертер температуры</h1>
+        <div class="input-container">
+            <p>Цельсий (°C)</p>
+            <input type="number"></input>
+        </div>
+        <div class="conversion-container">
+            <p>Фаренгейт (°F)</p>
+            <h1>32.0</h1>
+            <h2 class="hidden">Введите валидное число</h2>
+        </div>
+        <p>Формула: °F = °C × 9/5 + 32</p>
+    </div>
+    <script src="app.js"></script>
+</body>
