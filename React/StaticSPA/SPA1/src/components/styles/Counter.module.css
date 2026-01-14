@@ -1,0 +1,16 @@
+.counter{
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    height: min-content;
+    padding: 0;
+    flex-direction: column;
+    gap: 50px
+}
+
+.counter > h1 {
+    margin: 0;
+}
