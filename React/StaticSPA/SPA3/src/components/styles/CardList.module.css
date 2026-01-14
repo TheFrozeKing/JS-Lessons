@@ -1,0 +1,10 @@
+.cardList {
+    background-color: rgba(132, 0, 255, 0.274);  
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    /* align-items: flex-start; */
+    
+}
