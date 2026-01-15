@@ -7,8 +7,9 @@ function App() {
     <div className="app">
       <Header title="Галерея товаров мебели" />
       <main>
+        <CardList>
 
-        <CardList></CardList>
+        </CardList>
       </main>
       <Footer title="&copy; 2026 Разработчик: Ваше ФИО"/>
     </div>
