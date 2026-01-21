@@ -1,0 +1,16 @@
+.button {
+    width: 22.5%;
+    height: 5vw;
+    border-radius: 0.7vw;
+    border: none;
+    background-color: #666666;
+    transition: filter 0.1s ease;
+}
+
+.button:hover {
+    filter: brightness(1.2);
+}
+
+.button:active {
+    filter:brightness(0.9);
+}

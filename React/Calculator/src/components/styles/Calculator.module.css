@@ -1,0 +1,21 @@
+.calculator {
+    width: 29vw;
+    height: 36vw;
+    background-color: #353535;
+    border-radius: 2vw;
+    box-shadow: 0 0.2vw 0.5vw 0.3vw rgba(0, 0, 0, 0.315);
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* flex-grow: 1; */
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    justify-content: center;
+    gap: 0.9vw;
+}

@@ -1,0 +1,32 @@
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.input {
+    height: 6vw;
+    border-style: none;
+    border-radius: 0.75vw;
+    padding-left: 15px;
+    font-size: 2.5vw;
+    color: white;
+    text-align: right;
+    background-color: #222222;
+    padding-right: 1vw;
+}
+
+.inputContainer > h1 {
+    padding-left: 2px;
+    text-align: left;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+     -webkit-appearance: none;
+      margin: 0;
+ }
+ input[type="number"] {
+    -moz-appearance: textfield;
+      margin: 0;
+}
