@@ -1,0 +1,9 @@
+.inputContainer {
+    display:flex;
+    background: white;
+    width: 50vh;
+    height: 6vh;
+    border-radius: 2vw;
+    box-shadow: -0.025vh 0.2vh 1vh 0.2vh rgba(70, 70, 70, 0.144);
+    padding: 2vw;
+}
