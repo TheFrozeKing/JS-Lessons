@@ -1,0 +1,23 @@
+.conversionResult {
+    display:flex;
+    background: white;
+    width: 25vh;
+    height: 13vh;
+    border-radius: 1vh;
+    box-shadow: -0.025vh 0.2vh 1vh 0.3vh rgba(70, 70, 70, 0.144);
+    padding: 2vh;
+    flex-direction: column;
+    align-items: start;
+    border: solid;
+    border-width: 0.18vh;
+    border-color: rgb(230, 230, 230);
+    gap: 1vh;
+}
+.conversionResult hr {
+    width: 100%;
+    border-color: rgb(231, 231, 231);
+    background-color: rgb(231, 231, 231);
+    color: rgb(231, 231, 231);
+    border-style: solid;
+    border-width: 0.1vh;
+}
