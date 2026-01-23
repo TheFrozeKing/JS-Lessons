@@ -1,0 +1,26 @@
+.selector {
+    width: 35vh;
+    height: 4vh;
+    border-radius: 1vh;
+    
+    background-color: white;
+    transition: border-width 1s ease, box-shadow 0.3s ease;
+    padding: 0 1.5vh;    
+    
+    font-weight: 700;
+    font-size: 1.5vh;
+    
+    border-style: solid;
+    border-width: 0.1vh;
+    box-shadow: 0vh 0vh 0vh 0.4vh #cacacf;
+}
+
+.selector option {
+    font-weight: 400;
+}
+
+.selector:open {    
+    /* border-style: none; */
+    border-width: 0vh;
+    box-shadow: 0vh 0vh 0vh 0vh #cacacf;
+}
